@@ -12,22 +12,47 @@
     </head>
     <body>
         <script>
+            /* In JS there are three types of Box.
+            1- window.alert()= used for show the js output in a alert box.
+            2- window.prompt()= used for taking input from user.
+                2.1- always recive the value as a string.
+                2.2-
+            3- window.confirm()= used for confirmation from user.
+                3.1- always recieve the value as boolean.
+            */
             var time = window.prompt("Please enter the time ");
+            // window.prompt used for getting input from user in runtime.
 
-            //alert('Before Type Conversion '+typeof time);
+            // alert("Before Type Conversion " + typeof time);
 
             time = parseInt(time);
-
-            //window.alert("After Type Conversion "+typeof time);
+            /* parseInt() is a function  and this is used for convert the string data type into the number data type.
+            ex- "10"-> 10*/
+            //window.alert("After Type Conversion " + typeof time);
 
             if (time >= 6 && time <= 12) {
-                window.alert("Good Morning");
-            } else if (time > 12 && time <= 15) {
-                alert("Good Afternoon");
-            } else if (time > 15 && time <= 20) {
-                window.alert("Good Evening");
+                window.alert("Good Morning Sir !");
+            } else if (time > 12 && time <= 16) {
+                alert("Good Afternoon Sir !");
+            } else if (time > 16 && time <= 20) {
+                window.alert("Good Evening Sir !");
             } else {
-                alert("Good Night");
+                alert("Good Night !");
+            }
+        </script>
+        <script>
+            var a = window.confirm("Are you 18+ ?");
+            if (a === true) {
+                window.alert("You can Marry!");
+            } else {
+                alert("You can't Marry!");
+            }
+
+            var x = window.confirm("Do you Want to delete it ?");
+            if (x === true) {
+                window.alert("Do you want to save this file ?");
+            } else {
+                alert("Your file is deleted.");
             }
         </script>
     </body>
